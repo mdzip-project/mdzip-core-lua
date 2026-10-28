@@ -22,4 +22,8 @@ jobs:
       - uses: leafo/gh-actions-lua@v10
         with:
           luaVersion: ${{ matrix.lua }}
+      # T-010 checks behavior under a Turkish locale; Ubuntu runners don't ship one.
+      - name: Install Turkish locale
+        if: runner.os == 'Linux'
+        run: sudo locale-gen tr_TR.UTF-8
       - run: lua tests/run.lua

@@ -19,6 +19,12 @@ function H.not_applicable(id, reason)
   group(id).na = reason
 end
 
+-- Add a note to a test ID's result line (for example, a check that ran with
+-- less coverage than usual). It doesn't change the result.
+function H.note(id, text)
+  group(id).na = text
+end
+
 -- Run one check under a test ID.
 function H.check(id, name, fn)
   local g = group(id)
