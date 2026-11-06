@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased] - 0.1.0
+## [0.1.0] - 2026-11-06
 
 First version. Implements MDZip spec 1.2 and passes the spec's shared
 fixtures from [v1.2.1](https://github.com/mdzip-project/mdzip-spec/releases/tag/v1.2.1),

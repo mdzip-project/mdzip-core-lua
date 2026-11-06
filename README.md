@@ -10,7 +10,11 @@ This library implements the [MDZip specification](https://github.com/mdzip-proje
 
 ## Install
 
-Copy `src/mdzip/` onto your `package.path`, or, once it's published, `luarocks install mdzip-core-lua`. Then:
+```sh
+luarocks install mdzip-core-lua
+```
+
+Or copy `src/mdzip/` onto your `package.path`. Then:
 
 ```lua
 local mdzip = require("mdzip")
@@ -243,12 +247,9 @@ CI runs the tests on Lua 5.3 and 5.4.
 
 ## What's left to do
 
-- Run CI. The tests have run locally on Lua 5.4.6 only; Lua 5.3 is supported by design but not yet tested.
-- Publish to LuaRocks (`mdzip-core-lua-0.1.0-1.rockspec` is ready) and tag v0.1.0.
 - Try it in its intended hosts: a Pandoc custom reader and writer, and a Neovim plugin. Pandoc's Lua is 5.4; Neovim uses LuaJIT, which this library doesn't support yet (it needs 5.3's integers, bitwise operators and `string.pack`).
 - Dynamic Huffman compression, for smaller archives.
 - Optional extensions, when a consumer needs them: configurable limits, links outside and into archives (spec 9.4–9.6), image analysis.
-- Add the repo to the workspace manifest (`.github/docs/workspace.md`) and to mdzip.org's ecosystem list once it's published.
 
 ## License
 
