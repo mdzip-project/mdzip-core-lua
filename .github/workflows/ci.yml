@@ -18,8 +18,8 @@ jobs:
           - os: macos-latest
             lua: "5.4"
     steps:
-      - uses: actions/checkout@v4
-      - uses: leafo/gh-actions-lua@v10
+      - uses: actions/checkout@v5
+      - uses: leafo/gh-actions-lua@v12
         with:
           luaVersion: ${{ matrix.lua }}
       # T-010 checks behavior under a Turkish locale; Ubuntu runners don't ship one.
